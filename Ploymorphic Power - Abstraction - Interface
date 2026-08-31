@@ -27,3 +27,18 @@ class SMSSender{
 		System.out.println("Sending water level : "+waterLevel);
 	}
 }
+class ControlRoom{
+	private Alarm alarm;
+	private Display display;
+	pruivate SMSSender smsSender;
+	private Splitter splitter;
+	
+	}
+
+class Demo{
+	public static void main(String args[]){
+		
+		
+		}
+	
+	}
