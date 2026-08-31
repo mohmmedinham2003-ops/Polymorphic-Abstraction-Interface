@@ -1,27 +1,19 @@
 import java.util.*;
-//Without Polymorphism
-
 class Splitter{
 	public void split(int waterLevel){
-	System.out.println(waterLevel>=50?"Alarm ON":"Alarm OFF");
-	}
-
+		System.out.println(waterLevel>=75 ? "Splitter ON":"Splitter OFF");
+	}	
 }
-
 class Alarm{
-	
-	public void alarm(int waterLevel){
-		System.out.println(waterLevel >=50?"Alarm ON":"Alarm OFF");
-		}
+	public void operateAlarm(int waterLevel){
+		System.out.println(waterLevel>=50 ? "Alarm ON":"Alarm OFF");
 	}
-
+}
 class Display{
 	public void display(int waterLevel){
 		System.out.println("WaterLevel : "+waterLevel);
 	}
-	
-	}
-
+}
 class SMSSender{
 	public void send(int waterLevel){
 		System.out.println("Sending water level : "+waterLevel);
@@ -30,16 +22,16 @@ class SMSSender{
 class ControlRoom{
 	private Alarm alarm;
 	private Display display;
-	pruivate SMSSender smsSender;
+	private SMSSender smsSender;
 	private Splitter splitter;
 	
 	private int waterLevel;
 	
 	public void addSplitter(Splitter splitter){
-		this,splitter = splitter;	
+		this.splitter=splitter;
 	}
 	public void addAlarm(Alarm alarm){
-		this.alarm = alarm;
+		this.alarm=alarm;
 	}
 	public void addDisplay(Display display){
 		this.display=display;
@@ -49,24 +41,27 @@ class ControlRoom{
 	}
 	public void setWaterLevel(int waterLevel){
 		if(this.waterLevel!=waterLevel){
-			this.waterLevel = waterLevel;
+			this.waterLevel=waterLevel;
 		}
 		alarm.operateAlarm(waterLevel);
 		display.display(waterLevel);
 		smsSender.send(waterLevel);
-		splitter.split(waterlevel);
-		
-	}	
-	
-	
-	
-}
-
-
-class Demo{
-	public static void main(String args[]){
-		
-		
-		}
-	
+		splitter.split(waterLevel);
 	}
+}
+class PloymorphicPowerAbstractionInterface{	
+	public static void main(String args[]){
+		ControlRoom controlRoom=new ControlRoom();
+		controlRoom.addAlarm(new Alarm());
+		controlRoom.addDisplay(new Display());
+		controlRoom.addSMSSender(new SMSSender());
+		controlRoom.addSplitter(new Splitter());
+		Random r=new Random();
+		while(true){
+			int waterLevel=r.nextInt(101); //0 to 100
+			controlRoom.setWaterLevel(waterLevel);
+			try{Thread.sleep(1000);}catch(Exception ex){}
+			System.out.println();
+		}	
+	}
+}
