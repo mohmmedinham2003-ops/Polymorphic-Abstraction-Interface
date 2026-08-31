@@ -48,7 +48,13 @@ class ControlRoom{
 		this.smsSender=smsSender;
 	}
 	public void setWaterLevel(int waterLevel){
-		
+		if(this.waterLevel!=waterLevel){
+			this.waterLevel = waterLevel;
+		}
+		alarm.operateAlarm(waterLevel);
+		display.display(waterLevel);
+		smsSender.send(waterLevel);
+		splitter.split(waterlevel);
 		
 	}	
 	
