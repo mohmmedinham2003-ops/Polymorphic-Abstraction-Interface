@@ -33,7 +33,29 @@ class ControlRoom{
 	pruivate SMSSender smsSender;
 	private Splitter splitter;
 	
+	private int waterLevel;
+	
+	public void addSplitter(Splitter splitter){
+		this,splitter = splitter;	
 	}
+	public void addAlarm(Alarm alarm){
+		this.alarm = alarm;
+	}
+	public void addDisplay(Display display){
+		this.display=display;
+	}
+	public void addSMSSender(SMSSender smsSender){
+		this.smsSender=smsSender;
+	}
+	public void setWaterLevel(int waterLevel){
+		
+		
+	}	
+	
+	
+	
+}
+
 
 class Demo{
 	public static void main(String args[]){
