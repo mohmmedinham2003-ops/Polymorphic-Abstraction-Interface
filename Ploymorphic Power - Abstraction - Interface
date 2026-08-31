@@ -15,3 +15,15 @@ class Alarm{
 		}
 	}
 
+class Display{
+	public void display(int waterLevel){
+		System.out.println("WaterLevel : "+waterLevel);
+	}
+	
+	}
+
+class SMSSender{
+	public void send(int waterLevel){
+		System.out.println("Sending water level : "+waterLevel);
+	}
+}
