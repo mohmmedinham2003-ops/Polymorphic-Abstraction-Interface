@@ -1,1 +1,17 @@
+import java.util.*;
+//Without Polymorphism
+
+class Splitter{
+	public void split(int waterLevel){
+	System.out.println(waterLevel>=50?"Alarm ON":"Alarm OFF");
+	}
+
+}
+
+class Alarm{
+	
+	public void alarm(int waterLevel){
+		System.out.println(waterLevel >=50?"Alarm ON":"Alarm OFF");
+		}
+	}
 
