@@ -1,5 +1,7 @@
 import java.util.*;
-class Splitter{
+
+//without polymorphism
+/* class Splitter{
 	public void split(int waterLevel){
 		System.out.println(waterLevel>=75 ? "Splitter ON":"Splitter OFF");
 	}	
@@ -65,3 +67,9 @@ class PloymorphicPowerAbstractionInterface{
 		}	
 	}
 }
+*/
+
+//with polymorphism
+
+
+
