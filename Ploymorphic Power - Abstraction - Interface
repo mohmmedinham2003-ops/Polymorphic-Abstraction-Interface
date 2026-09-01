@@ -70,6 +70,25 @@ class PloymorphicPowerAbstractionInterface{
 */
 
 //with polymorphism
-
+class WaterLevel{
+	public void update(int waterLevel){
+	
+	}	
+}
+class Alarm extends WaterLevelObserver{
+	public void update(int waterLevel){
+		System.out.println(waterLevel>=50 ? "Alarm ON":"Alaram OFF");
+	}	
+}
+class Display extends WaterLevelObserver{
+	public void update(int waterLevel){
+		System.out.println("WaterLevel : "+waterLevel);
+	}
+}
+class SMSSender extends WaterLevelObserver{
+	public void update(int waterLevel){
+		System.out.println("Sending water level : "+waterLevel);
+	}
+}
 
 
