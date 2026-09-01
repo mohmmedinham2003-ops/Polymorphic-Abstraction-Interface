@@ -120,4 +120,13 @@ class ControlRoom{
 
 }
 
+class PloymorphicPowerAbstractionInterface{
+		public static void main(String args[]){
+		ControlRoom controlRoom = new ControlRoom();
+		controlRoom.addWaterLevelObserver(new Alarm());	
+		controlRoom.addWaterLevelObserver(new Display());
+		controlRoom.addWaterLevelObserver(new SMSSender());	
+		}
+}
+
 
