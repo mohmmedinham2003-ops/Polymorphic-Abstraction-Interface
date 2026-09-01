@@ -70,7 +70,7 @@ class PloymorphicPowerAbstractionInterface{
 */
 
 //with polymorphism
-class WaterLevel{
+class WaterLevelObserver{
 	public void update(int waterLevel){
 	
 	}	
@@ -95,13 +95,13 @@ class ControlRoom{
 	private WaterLevelObserver[] observerArray = new WaterLevelObserver[0];	
 	private int waterLevel;
 	
-	public void addWaterLevelObserver (waterLevelObserver ob){
+	public void addWaterLevelObserver (WaterLevelObserver ob){
 	extendsArray();
 	observerArray[observerArray.length-1] = ob;		
 	}
 	
 	public void extendsArray(){
-	waterLevelObserver[] tempObserverArray = new WaterLevelObserver[observerArray.length+1];
+	WaterLevelObserver[] tempObserverArray = new WaterLevelObserver[observerArray.length+1];
 	for(int i = 0; i<observerArray.length;i++){
 	tempObserverArray[i] = observerArray[i];	
 	}
@@ -126,7 +126,7 @@ class PloymorphicPowerAbstractionInterface{
 		controlRoom.addWaterLevelObserver(new Alarm());	
 		controlRoom.addWaterLevelObserver(new Display());
 		controlRoom.addWaterLevelObserver(new SMSSender());	
-		
+		Random r = new Random();
 		while(true){
 				int waterLevel = r.nextInt(101);
 				controlRoom.setWaterLevel(waterLevel);
@@ -136,5 +136,3 @@ class PloymorphicPowerAbstractionInterface{
 		
 		}
 }
-
-
