@@ -70,7 +70,7 @@ class PloymorphicPowerAbstractionInterface{
 */
 
 //with polymorphism
-class WaterLevelObserver{
+/*class WaterLevelObserver{
 	public void update(int waterLevel){
 	
 	}	
@@ -144,10 +144,10 @@ class PloymorphicPowerAbstractionInterface{
 		
 		}
 }
+*/
 
-
-//With Array List
-class WaterLevelObserver{
+//With Array List Q 230
+/*class WaterLevelObserver{
 		public void update(int waterLevel){
 			
 		}
@@ -157,6 +157,7 @@ class Splitter extends WaterLevelObserver{
 		System.out.println(waterLevel>=75 ? "Splitter ON":"Splitter OFF");
 	}	
 }
+
 class Alarm extends WaterLevelObserver{
 	public void update(int waterLevel){
 		System.out.println(waterLevel>=50 ? "Alarm ON":"Alarm OFF");
@@ -210,3 +211,4 @@ class PloymorphicPowerAbstractionInterface{
 			}
 
 }
+*/
