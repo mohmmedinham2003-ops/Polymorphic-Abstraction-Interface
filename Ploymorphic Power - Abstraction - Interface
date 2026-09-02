@@ -193,17 +193,20 @@ class ControlRoom{
 
 class PloymorphicPowerAbstractionInterface{
 		public static void main(String args[]){
-			
-			
+			ControlRoom controlRoom=new ControlRoom();
+			controlRoom.addWaterLevelObserver(new Alarm());
+			controlRoom.addWaterLevelObserver(new Alarm());
+			controlRoom.addWaterLevelObserver(new Display());
+			controlRoom.addWaterLevelObserver(new SMSSender());
+			controlRoom.addWaterLevelObserver(new SMSSender());
+			controlRoom.addWaterLevelObserver(new Splitter());
+			Random r=new Random();
+			while(true){
+			int waterLevel=r.nextInt(101); //0 to 100
+			controlRoom.setWaterLevel(waterLevel);
+			try{Thread.sleep(1000);}catch(Exception ex){}
+			System.out.println();
+		}	
 			}
-
-
-
-
-
-
-
-
-
 
 }
