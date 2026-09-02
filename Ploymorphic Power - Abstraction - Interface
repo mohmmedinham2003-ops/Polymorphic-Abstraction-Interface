@@ -75,6 +75,13 @@ class WaterLevelObserver{
 	
 	}	
 }
+
+class Splitter extends WaterLevelObserver{
+		public void update(int waterLevel){
+		System.out.println(waterLevel>=75 ? "Splitter ON":"Splitter OFF");	
+		}
+	
+}
 class Alarm extends WaterLevelObserver{
 	public void update(int waterLevel){
 		System.out.println(waterLevel>=50 ? "Alarm ON":"Alaram OFF");
@@ -123,6 +130,7 @@ class ControlRoom{
 class PloymorphicPowerAbstractionInterface{
 		public static void main(String args[]){
 		ControlRoom controlRoom = new ControlRoom();
+		controlRoom.addWaterLevelObserver(new Splitter());
 		controlRoom.addWaterLevelObserver(new Alarm());	
 		controlRoom.addWaterLevelObserver(new Display());
 		controlRoom.addWaterLevelObserver(new SMSSender());	
