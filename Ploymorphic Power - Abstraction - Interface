@@ -168,7 +168,11 @@ class Display extends WaterLevelObserver{
 	}
 }
 
-
+class SMSSender extends WaterLevelObserver{
+	public void update(int waterLevel){
+		System.out.println("Sending water level : "+waterLevel);
+	}
+}
 
 class PloymorphicPowerAbstractionInterface{
 		public static void main(String args[]){
