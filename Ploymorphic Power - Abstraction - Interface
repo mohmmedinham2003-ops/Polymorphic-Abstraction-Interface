@@ -144,3 +144,36 @@ class PloymorphicPowerAbstractionInterface{
 		
 		}
 }
+
+
+//With Array List
+class WaterLevelObserver{
+		public void update(int waterLevel){
+			
+		}
+}
+class Splitter extends WaterLevelObserver{
+	public void update(int waterLevel){
+		System.out.println(waterLevel>=75 ? "Splitter ON":"Splitter OFF");
+	}	
+}
+
+
+
+
+class PloymorphicPowerAbstractionInterface{
+		public static void main(String args[]){
+			
+			
+			}
+
+
+
+
+
+
+
+
+
+
+}
