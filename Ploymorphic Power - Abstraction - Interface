@@ -227,6 +227,13 @@ Stack(int initSize,double loadFact){
 		this.loadFact = loadFact;
 		this.initSize = initSize;
 	}
+private void extendsArray(){
+			int tempDataArray[] = new int[dataArray.length+(int)(loadFact * dataArray.length)];
+			for(int i = 0;i < dataArray.length;i++){
+			tempDataArray[i] = dataArray[i];	
+			}
+			dataArray = tempDataArray;
+	}
 }
 class PloymorphicPowerAbstractionInterface{
 		public static void main(String args[]){
