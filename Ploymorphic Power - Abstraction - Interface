@@ -212,3 +212,20 @@ class PloymorphicPowerAbstractionInterface{
 
 }
 */
+
+//Data Structures and Algorithm
+//Stack
+class Stack{
+	private int[] dataArray;
+	private int nextIndex;
+	private double loadFact;
+	private int initSize;
+	
+}
+class PloymorphicPowerAbstractionInterface{
+		public static void main(String args[]){
+		Stack s1 = new Stack(12,0.25);	
+}
+
+}
+
