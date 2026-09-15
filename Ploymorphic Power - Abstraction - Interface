@@ -251,7 +251,13 @@ public int peek(){
 		}
 		dataArray[nextIndex++] = data;
 	}
-
+	public void trimToSize(){
+	int[] tempDataArray = new int[size()];
+	for(int i = 0;i < dataArray.length;i++){
+	tempDataArray[i] = dataArray[i];	
+	}
+	dataArray = tempDataArray;
+	}
 	
 }
 class PloymorphicPowerAbstractionInterface{
