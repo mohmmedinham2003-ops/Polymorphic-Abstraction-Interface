@@ -245,6 +245,13 @@ public int peek(){
 	public int poll(){
 		return isEmpty?-1:dataArray[--nextIndex];
 	}
+	public void push(int data){
+		if(isFull){
+		extendsArray();	
+		}
+		dataArray[nextIndex++] = data;
+	}
+
 	
 }
 class PloymorphicPowerAbstractionInterface{
