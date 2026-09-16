@@ -258,11 +258,23 @@ public int peek(){
 	}
 	dataArray = tempDataArray;
 	}
+	public int size(){
+			return nextIndex;
+	}
+	
+	public void clear(){
+			dataArray = new int[initSize];
+			nextIndex = 0;
+	}
+
+
+
 	
 }
 class PloymorphicPowerAbstractionInterface{
 		public static void main(String args[]){
 		Stack s1 = new Stack(12,0.25);	
 }
+
 
 }
