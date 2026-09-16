@@ -313,6 +313,17 @@ class PloymorphicPowerAbstractionInterface{
 			s1.push(120);
 			s1.display(); //[120,110,100,90...50,40,30,20,10]
 			System.out.println("Size      : "+s1.size()); //12
+
+			int topData;
+			topData=s1.peek();
+			System.out.println("Top Data : "+topData); //120
+			System.out.println("After calling peek()...");
+			s1.display(); //[120,110,100,90...50,40,30,20,10]
+			
+			topData=s1.poll();
+			System.out.println("Top Data : "+topData); //120
+			System.out.println("After calling poll()...");
+			s1.display(); //[110,100,90...50,40,30,20,10]
 		
 }
 
