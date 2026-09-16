@@ -266,7 +266,18 @@ public int peek(){
 			dataArray = new int[initSize];
 			nextIndex = 0;
 	}
-
+public void pop(){
+	if(!isEmpty()){
+	nextIndex--;	
+	}
+	public int search(int data){
+		for(int i = 0;i<dataArray.length;i++){
+			if(dataArray[i] == data){
+			return i;
+			}
+			return -1;
+		}
+	}
 
 
 	
