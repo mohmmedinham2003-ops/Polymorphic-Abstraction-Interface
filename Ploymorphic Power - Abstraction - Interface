@@ -312,9 +312,7 @@ class PloymorphicPowerAbstractionInterface{
 			s1.push(70);
 			s1.push(80);
 			s1.push(90);
-			s1.push(100);
-			s1.push(110);
-			s1.push(120);
+			
 			s1.display(); //[120,110,100,90...50,40,30,20,10]
 			System.out.println("Size      : "+s1.size()); //12
 			
