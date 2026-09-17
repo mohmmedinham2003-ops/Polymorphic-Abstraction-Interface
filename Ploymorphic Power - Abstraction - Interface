@@ -215,6 +215,7 @@ class PloymorphicPowerAbstractionInterface{
 
 //Data Structures and Algorithm
 //Stack
+/*
 class Stack{
 	private int[] dataArray;
 	private int nextIndex;
@@ -330,3 +331,7 @@ class PloymorphicPowerAbstractionInterface{
 }
 
 }
+*/
+
+class PloymorphicPowerAbstractionInterface{
+	
