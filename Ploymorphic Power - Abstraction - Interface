@@ -345,6 +345,17 @@ class Queue{
 	this.loadfact = loadfact;
 	}
 
+public void extendsArray(){
+			int tempDataArray[] = new int[dataArray.length+int(loadfact * dataArray.length)];
+			for(int i = 0;i<dataArray.length;i++){
+			tempDataArray[i] = dataArray[i];	
+			}
+			dataArray = tempDataArray;
+	}
+	private boolean isFull(){
+	return nextIndex>=dataArray.length;	
+	}
+
 }
 
 class PloymorphicPowerAbstractionInterface{
