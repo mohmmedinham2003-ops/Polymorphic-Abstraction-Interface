@@ -356,7 +356,6 @@ public void extendsArray(){
 	return nextIndex>=dataArray.length;	
 	}
 
-}
 public int peek(){
 		return isEmpty? -1:dataArray[0];	
 	}
@@ -368,7 +367,7 @@ public int peek(){
 		}
 		return -1;	
 	}
-
+}
 class PloymorphicPowerAbstractionInterface{
 	public static void main(String args[]){
 		Queue q1 = new Queue(12,0.25);
