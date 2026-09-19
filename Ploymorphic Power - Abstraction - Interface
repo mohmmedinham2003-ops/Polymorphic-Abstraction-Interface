@@ -383,7 +383,18 @@ public int size(){
 	dataArray = new int[initSize];
 	nextIndex = 0;	
 	}
-	
+	public void clear(){
+	dataArray = new int[initSize];
+	nextIndex = 0;	
+	}
+	public void remove(){
+		if(!isEmpty()){
+			for(int i = 0;i<nextIndex -1; i++){
+					dataArray[i] = dataArray[i+1];
+			}
+				nextIndex--;
+		}	
+	}
 
 }
 class PloymorphicPowerAbstractionInterface{
