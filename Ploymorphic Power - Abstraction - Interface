@@ -367,6 +367,14 @@ public int peek(){
 		}
 		return -1;	
 	}
+
+	public void trimToSize(){
+	int tempDataArray[] = new int[size()];
+		for(int i = 0;i<dataArray.length;i++){
+			tempDataArray[i] = dataArray[i];
+		}
+		dataArray = tempDataArray;
+	}
 }
 class PloymorphicPowerAbstractionInterface{
 	public static void main(String args[]){
