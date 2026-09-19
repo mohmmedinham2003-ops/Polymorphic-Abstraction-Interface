@@ -410,6 +410,8 @@ public int search(int data){
 			return dataArray.length;
 	}
 
+
+
 }
 class PloymorphicPowerAbstractionInterface{
 	public static void main(String args[]){
@@ -428,6 +430,21 @@ class PloymorphicPowerAbstractionInterface{
 				q1.add(120);
 				q1.display(); //[20,30,40,50 ........120]
 				System.out.println("Size      : "+q1.size()); //11
-				System.out.println("Index of 50 : "+q1.search(50)); //3			
+				System.out.println("Index of 50 : "+q1.search(50)); //3	
+
+				q1.remove();
+				q1.display(); //[20,30,40,50 ........120]
+				System.out.println("Size      : "+q1.size()); //11
+				System.out.println("Index of 50 : "+q1.search(50)); //3
+				
+				int firstData=q1.peek();
+				System.out.println("First data : "+firstData);
+				System.out.println("Calling after peek()....");
+				q1.display(); //[20,30,40,50 ........120]
+				
+				firstData=q1.poll();
+				System.out.println("First data : "+firstData);
+				System.out.println("Calling after poll()....");
+				q1.display(); //[30,40,50 ........120]
 	}
 }
