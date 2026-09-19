@@ -333,7 +333,17 @@ class PloymorphicPowerAbstractionInterface{
 }
 */
 class Queue{
-
+	private int[] dataArray;
+	private int nextIndex;
+	private double loadfact;
+	private int initSize;
+	
+	Queue(int initSize,double loadfact){
+	dataArray = new int[initSize];
+	nextIndex = 0;
+	this.initSize = initSize;
+	this.loadfact = loadfact;
+	}
 
 }
 
