@@ -457,7 +457,17 @@ class PloymorphicPowerAbstractionInterface{
 //List 
 
 class List{
+	public int[] dataArray;
+	private int nextIndex;
+	private double loadfact;
+	private int initSize;
 	
+	List(int initSize,double loadfact){
+	dataArray = new int[initSize];
+	nextIndex = 0;
+	this.loadfact = loadfact;
+	this.initSize = initSize;	
+	}
 	
 }
  class PloymorphicPowerAbstractionInterface{
