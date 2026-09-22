@@ -476,8 +476,16 @@ class List{
 		}
 			dataArray = tempDataArray;
 	}
+
 	private boolean isFull(){
-	return nextIndex>=dataArray.length;	
+		return nextIndex>=dataArray.length;	
+	}
+
+	public void add(int data){
+			if(isFull){
+			extendsArray;	
+			}
+			dataArray[nextIndex++] = data;
 	}
 	
 }
