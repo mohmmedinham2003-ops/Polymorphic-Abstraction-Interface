@@ -535,6 +535,17 @@ class List{
 	public void removeLast(){
 		remove(size()-1);
 	}
+		public void remove(int startIndex, int endIndex){
+		//
+	}	
+	public int search(int data){
+		for (int i = 0; i < nextIndex; i++){
+			if(dataArray[i]==data){
+				return i;
+			}
+		}
+		return -1;
+	}
 	
 }
  class PloymorphicPowerAbstractionInterface{
