@@ -499,6 +499,26 @@ public void add(int index,int data){
 					nextIndex++;
 			}
 	}
+public void addLast(int data){
+	add(nextIndex,data);	
+	}
+	
+	public void trimToSize(){
+		int[] tempDataArray = new int[size()];
+		for(int i = 0;i<dataArray.length;i++){
+			tempDataArray[i] = dataArray[i];
+		}
+		dataArray = tempDataArray;
+	}
+	
+	public int size(){
+	return nextIndex;	
+	}
+	public void clear(){
+	dataArray = new int[initSize];
+	nextIndex = 0;	
+	}
+
 	
 }
  class PloymorphicPowerAbstractionInterface{
