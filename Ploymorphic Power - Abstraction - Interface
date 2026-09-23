@@ -468,7 +468,7 @@ class List{
 	this.loadfact = loadfact;
 	this.initSize = initSize;	
 	}
-
+	
 	private void extendsArray(){
 		int tempDataArray[]=new int[dataArray.length+(int)(loadFact*dataArray.length)];
 		for(int i = 0;i<dataArray.length;i++){
@@ -476,18 +476,17 @@ class List{
 		}
 			dataArray = tempDataArray;
 	}
-
 	private boolean isFull(){
-		return nextIndex>=dataArray.length;	
+	return nextIndex>=dataArray.length;	
 	}
-
 	public void add(int data){
 			if(isFull){
 			extendsArray;	
 			}
 			dataArray[nextIndex++] = data;
 	}
-public void add(int index,int data){
+	
+	public void add(int index,int data){
 			if(isFull){
 			extendsArray();	
 			}
@@ -499,7 +498,8 @@ public void add(int index,int data){
 					nextIndex++;
 			}
 	}
-public void addLast(int data){
+	
+	public void addLast(int data){
 	add(nextIndex,data);	
 	}
 	
@@ -518,7 +518,7 @@ public void addLast(int data){
 	dataArray = new int[initSize];
 	nextIndex = 0;	
 	}
-public void remove(int index){
+	public void remove(int index){
 			if(!isEmpty){
 				if(index>=0 && index<nextIndex){
 					for(int i = index; i<nextIndex-1;i--){
@@ -529,7 +529,6 @@ public void remove(int index){
 			}
 			
 	}
-
 	
 }
  class PloymorphicPowerAbstractionInterface{
