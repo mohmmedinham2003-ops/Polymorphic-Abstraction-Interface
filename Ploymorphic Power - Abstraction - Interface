@@ -518,6 +518,17 @@ public void addLast(int data){
 	dataArray = new int[initSize];
 	nextIndex = 0;	
 	}
+public void remove(int index){
+			if(!isEmpty){
+				if(index>=0 && index<nextIndex){
+					for(int i = index; i<nextIndex-1;i--){
+					dataArray[i] = dataArray[i+1]	
+					}
+				}
+				nextIndex--;	
+			}
+			
+	}
 
 	
 }
