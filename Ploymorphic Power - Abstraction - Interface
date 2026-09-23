@@ -529,6 +529,12 @@ class List{
 			}
 			
 	}
+	public void removeFirst(){
+		remove(0);
+	}
+	public void removeLast(){
+		remove(size()-1);
+	}
 	
 }
  class PloymorphicPowerAbstractionInterface{
