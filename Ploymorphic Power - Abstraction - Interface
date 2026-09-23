@@ -487,6 +487,18 @@ class List{
 			}
 			dataArray[nextIndex++] = data;
 	}
+public void add(int index,int data){
+			if(isFull){
+			extendsArray();	
+			}
+			if(index >=0 && index<=nextIndex){
+					for(int i = nextIndex;i>=index;i--){
+					dataArray[i+1] = dataArray[i];	
+					}
+					dataArray[index] = data;
+					nextIndex++;
+			}
+	}
 	
 }
  class PloymorphicPowerAbstractionInterface{
