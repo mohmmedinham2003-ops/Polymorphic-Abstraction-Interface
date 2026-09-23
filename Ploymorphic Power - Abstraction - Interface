@@ -457,77 +457,83 @@ class PloymorphicPowerAbstractionInterface{
 //List 
 
 class List{
-	public int[] dataArray;
+	private int[] dataArray;
 	private int nextIndex;
-	private double loadfact;
+	private double loadFact;
 	private int initSize;
 	
-	List(int initSize,double loadfact){
-	dataArray = new int[initSize];
-	nextIndex = 0;
-	this.loadfact = loadfact;
-	this.initSize = initSize;	
+	List(int initSize, double loadFact){
+		dataArray=new int[initSize];
+		nextIndex=0;
+		this.loadFact=loadFact;
+		this.initSize=initSize;
 	}
-	
 	private void extendsArray(){
 		int tempDataArray[]=new int[dataArray.length+(int)(loadFact*dataArray.length)];
-		for(int i = 0;i<dataArray.length;i++){
-				tempDataArrayp[i] = dataArray[i];
+		for (int i = 0; i < dataArray.length; i++){
+			tempDataArray[i]=dataArray[i];
 		}
-			dataArray = tempDataArray;
+		dataArray=tempDataArray; 
 	}
 	private boolean isFull(){
-	return nextIndex>=dataArray.length;	
+		return nextIndex>=dataArray.length;
 	}
-	public void add(int data){
-			if(isFull){
-			extendsArray;	
-			}
-			dataArray[nextIndex++] = data;
-	}
-	
-	public void add(int index,int data){
-			if(isFull){
-			extendsArray();	
-			}
-			if(index >=0 && index<=nextIndex){
-					for(int i = nextIndex;i>=index;i--){
-					dataArray[i+1] = dataArray[i];	
-					}
-					dataArray[index] = data;
-					nextIndex++;
-			}
-	}
-	
-	public void addLast(int data){
-	add(nextIndex,data);	
-	}
-	
-	public void trimToSize(){
-		int[] tempDataArray = new int[size()];
-		for(int i = 0;i<dataArray.length;i++){
-			tempDataArray[i] = dataArray[i];
+	public void add(int data){ //Insertion order
+		if(isFull()){
+			extendsArray();
 		}
-		dataArray = tempDataArray;
+		dataArray[nextIndex++]=data;
 	}
-	
+	public void add(int index,int data){
+		if(isFull()){
+			extendsArray();
+		}
+		if(index>=0 && index<=nextIndex){
+			for (int i = nextIndex-1; i >=index; i--){
+				dataArray[i+1]=dataArray[i];
+			}
+			dataArray[index]=data;
+			nextIndex++;
+		}
+	}
+	public void addFirst(int data){
+		add(0,data);
+	}
+	public void addLast(int data){
+		add(nextIndex,data);
+	}
+	public void add(int...intData){
+	}
+	public void add(int index, int...intData){
+		//
+	}
+	public void trimToSize(){
+		int[] tempDataArray=new int[size()];
+		for (int i = 0; i < dataArray.length; i++){
+			tempDataArray[i]=dataArray[i];
+		}
+		dataArray=tempDataArray;
+	}
 	public int size(){
-	return nextIndex;	
+		return nextIndex;
+	}
+	public void trim(){
+		//
+		//
 	}
 	public void clear(){
-	dataArray = new int[initSize];
-	nextIndex = 0;	
+		dataArray=new int[initSize];
+		nextIndex=0;
 	}
 	public void remove(int index){
-			if(!isEmpty){
-				if(index>=0 && index<nextIndex){
-					for(int i = index; i<nextIndex-1;i--){
-					dataArray[i] = dataArray[i+1]	
-					}
+		if(!isEmpty()){
+			if(index>=0 && index<nextIndex){
+				for(int i=index; i<nextIndex-1; i++){
+					dataArray[i]=dataArray[i+1];
 				}
-				nextIndex--;	
-			}
-			
+			}	
+			nextIndex--;
+		}
 	}
 	public void removeFirst(){
 		remove(0);
@@ -535,7 +541,7 @@ class List{
 	public void removeLast(){
 		remove(size()-1);
 	}
-		public void remove(int startIndex, int endIndex){
+	public void remove(int startIndex, int endIndex){
 		//
 	}	
 	public int search(int data){
@@ -574,9 +580,8 @@ class List{
 	public int capacity(){
 		return dataArray.length;
 	}
-	
 }
- class Demo{
+class Demo{
 	public static void main(String args[]){
 		List list1=new List(12,0.25);
 		list1.add(10); //Insertion order
@@ -595,5 +600,4 @@ class List{
 		list1.display(); //[20,30, ........90]
 		
 	}
-	 
 }
