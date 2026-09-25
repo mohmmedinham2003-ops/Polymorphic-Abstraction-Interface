@@ -456,6 +456,7 @@ class PloymorphicPowerAbstractionInterface{
 
 //List 
 
+/*
 class List{
 	private int[] dataArray;
 	private int nextIndex;
@@ -581,7 +582,7 @@ class List{
 		return dataArray.length;
 	}
 }
-class Demo{
+class PloymorphicPowerAbstractionInterface{
 	public static void main(String args[]){
 		List list1=new List(12,0.25);
 		list1.add(10); //Insertion order
@@ -601,3 +602,5 @@ class Demo{
 		
 	}
 }
+*/
+
